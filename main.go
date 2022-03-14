@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-	// I'm ok with not testing this call
 	os.Exit(realMain(os.Stdout))
 }
 func realMain(out io.Writer) int {

@@ -41,7 +41,6 @@ func (s *FizzBuzzService) FizzBuzz(params FizzBuzzParams) *FizzBuzzOut {
 }
 
 func (s *FizzBuzzService) Stats() []FizzBuzzIn {
-	//return s.storage.GetMostUsed()
 	return s.sorted()
 }
 

@@ -1,7 +1,6 @@
 package main
 
 type IStorage interface {
-	//GetMostUsed() FizzBuzzIn
 	Store(FizzBuzzParams)
 	GetAll() []FizzBuzzIn
 }
@@ -33,18 +32,3 @@ func (f *FizzBuzzStorage) Store(fizzBuzz FizzBuzzParams) {
 		}
 	}
 }
-
-/* func (f *FizzBuzzStorage) GetMostUsed() FizzBuzzIn {
-	var maxHit int64
-	var mostUsed FizzBuzzIn
-	for _, fb := range f.Data {
-		if fb.Hits > maxHit {
-			maxHit = fb.Hits
-			mostUsed = FizzBuzzIn{
-				maxHit,
-				fb.Params,
-			}
-		}
-	}
-	return mostUsed
-} */
