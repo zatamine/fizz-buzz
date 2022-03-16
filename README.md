@@ -40,7 +40,7 @@ make run
 
 Result `2022/03/14 06:52:06 GIN HTTP server running on port ':8080'`
 
-By default the program use the "localhost" host local machine and port "8080", take care that the port is not used.
+By default the program use "localhost" as host machine and port "8080", take care that the port is not used.
 
 Request example:
 
@@ -58,8 +58,8 @@ List of useful command line.
 
 ```
 $ make lint  # Run a static analysis
-$ make run   # To compiles and runs the package
-$ make test  # Run unit and integration tests with coverage
+$ make run   # To compile and run the package
+$ make test  # Runs unit and integration tests with coverage
 $ make build # Build the programe on '/tmp/fizz-buzz'
 ```
 
