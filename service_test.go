@@ -118,7 +118,7 @@ func TestStatsService(t *testing.T) {
 			FizzBuzzParams{},
 			FizzBuzzParams{},
 			FizzBuzzParams{},
-			nil,
+			[]FizzBuzzIn{},
 			0,
 			0,
 			0,

@@ -62,7 +62,7 @@ func TestStats(t *testing.T) {
 		{
 			"Without stats parameters",
 			200,
-			"null\n",
+			"[]\n",
 		},
 		{
 			"With stats parameters",
@@ -74,7 +74,7 @@ func TestStats(t *testing.T) {
 	service := NewfizzBuzzService(storage)
 	controller := NewController(service)
 	for _, tc := range tests {
-		if tc.want != "null\n" {
+		if tc.want != "[]\n" {
 			callFizzBuzz(t, controller)
 		}
 		request, err := http.NewRequest(http.MethodGet, "", nil)

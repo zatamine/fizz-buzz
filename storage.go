@@ -12,7 +12,7 @@ func NewInmemory() IStorage {
 }
 
 func (f *FizzBuzzStorage) GetAll() []FizzBuzzIn {
-	var fizzBuzzList []FizzBuzzIn
+	fizzBuzzList := make([]FizzBuzzIn, 0)
 	for _, fb := range f.Data {
 		fizzBuzzList = append(fizzBuzzList, fb)
 	}
