@@ -78,7 +78,8 @@ func TestMapQueries(t *testing.T) {
 	}
 	for _, tc := range tests {
 		url := fmt.Sprintf("%s%s", host, tc.inputPath)
-		req, _ := http.NewRequest(http.MethodGet, url, nil)
+		req, err := http.NewRequest(http.MethodGet, url, nil)
+		assert.NoError(t, err)
 		t.Run(tc.name, func(t *testing.T) {
 			got := mapQueries(req)
 			assert.Equal(t, tc.want, got)
