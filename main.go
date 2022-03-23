@@ -5,8 +5,8 @@ import (
 )
 
 func main() {
-	storage := NewInmemory()
-	service := NewfizzBuzzService(storage)
+	storage := NewInMemory()
+	service := NewFizzBuzzService(storage)
 	controller := NewController(service)
 	router := NewGinRouter(controller)
 

@@ -5,7 +5,7 @@ type IStorage interface {
 	GetAll() []FizzBuzzIn
 }
 
-func NewInmemory() IStorage {
+func NewInMemory() IStorage {
 	return &FizzBuzzStorage{
 		Data: make(map[string]FizzBuzzIn),
 	}

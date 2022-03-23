@@ -37,8 +37,8 @@ func TestGetByParams(t *testing.T) {
 			400,
 		},
 	}
-	storage := NewInmemory()
-	service := NewfizzBuzzService(storage)
+	storage := NewInMemory()
+	service := NewFizzBuzzService(storage)
 	controller := NewController(service)
 	for _, tc := range tests {
 		url := fmt.Sprintf("%s%s", host, tc.path)
@@ -70,8 +70,8 @@ func TestStats(t *testing.T) {
 			"[{\"Hits\":1,\"Params\":{\"Int1\":3,\"Int2\":5,\"Limit\":100,\"Str1\":\"fizz\",\"Str2\":\"buzz\"}}]\n",
 		},
 	}
-	storage := NewInmemory()
-	service := NewfizzBuzzService(storage)
+	storage := NewInMemory()
+	service := NewFizzBuzzService(storage)
 	controller := NewController(service)
 	for _, tc := range tests {
 		if tc.want != "[]\n" {

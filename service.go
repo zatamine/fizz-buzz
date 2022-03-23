@@ -16,7 +16,7 @@ type IFizzBuzzService interface {
 }
 
 // NewfizzBuzzService a constructor to create a new instance of fizz-buzz service
-func NewfizzBuzzService(storage IStorage) IFizzBuzzService {
+func NewFizzBuzzService(storage IStorage) IFizzBuzzService {
 	return &FizzBuzzService{
 		storage: storage,
 	}

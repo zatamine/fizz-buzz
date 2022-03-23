@@ -8,8 +8,8 @@ import (
 )
 
 func TestGET(t *testing.T) {
-	storage := NewInmemory()
-	service := NewfizzBuzzService(storage)
+	storage := NewInMemory()
+	service := NewFizzBuzzService(storage)
 	controller := NewController(service)
 	router := NewGinRouter(controller)
 	router.GET("/path", func(w http.ResponseWriter, req *http.Request) {

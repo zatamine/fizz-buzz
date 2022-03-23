@@ -70,8 +70,8 @@ func TestFizzBuzz(t *testing.T) {
 			},
 		},
 	}
-	storage := NewInmemory()
-	FBService := NewfizzBuzzService(storage)
+	storage := NewInMemory()
+	FBService := NewFizzBuzzService(storage)
 	for _, tc := range tests {
 		t.Run(tc.name, func(t *testing.T) {
 			got := FBService.FizzBuzz(tc.params)
@@ -172,8 +172,8 @@ func TestStatsService(t *testing.T) {
 	}
 
 	for _, tc := range tests {
-		storage := NewInmemory()
-		FBService := NewfizzBuzzService(storage)
+		storage := NewInMemory()
+		FBService := NewFizzBuzzService(storage)
 		t.Run(tc.name, func(t *testing.T) {
 			for i := 1; i <= tc.callNbr1; i++ {
 				FBService.FizzBuzz(tc.params1)
